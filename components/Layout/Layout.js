@@ -3,16 +3,18 @@ import HeadTags from "./HeadTags";
 import Navbar from "./Navbar";
 import { Container } from "semantic-ui-react";
 
-function Layout() {
-  return (
-    <>
-      <HeadTags />
+function Layout({ children }) {
+    return (
+        <>
+            <HeadTags />
 
-      <Navbar />
+            <Navbar />
 
-      <Container style={{ paddingTop: "1rem" }} text></Container>
-    </>
-  );
+            <Container style={{ paddingTop: "1rem" }} text>
+                {children}
+            </Container>
+        </>
+    );
 }
 
 export default Layout;
